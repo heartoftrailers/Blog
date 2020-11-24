@@ -13,7 +13,7 @@ header h1 a{
     text-decoration: none;
 }
 body a{
-    color: hotpink;
+    color: rgb(0, 218, 247);
     
 }
 body {
@@ -35,9 +35,9 @@ body {
 .post-entry h2 {
     margin: 0.5rem 0;
 }
-.post-entry h2 a,
+
 .post-entry h2 a:visited {
-    color: yellowgreen;
+    color: rgb(255, 196, 0);
     text-decoration: none;
 }
 .post-entry p {

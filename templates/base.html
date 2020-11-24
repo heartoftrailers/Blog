@@ -1,10 +1,8 @@
 
 {% load static %}
-
- 
 <html>
     <head>
-        <title>Alex's Blog</title>
+        <title>Django blog</title>
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400"
         rel="stylesheet">
         <link href="{% static 'css/base.css' %}" rel="stylesheet">
@@ -12,14 +10,17 @@
     <body>
         <body id="bg" style="background-image: url('/static/alex.png');"> 
         <img src="/static/self.jpg" alt="Girl in a jacket" width="500" height="300"> 
-  
-        <header>
-            <h1><a href="{% url 'home' %}">Alex's Blog</a></h1>
-        </header>
         <div>
-            {% block content %}     
+            <header>
+                <div class="nav-left">
+                    <h1><a href="{% url 'home' %}">Django blog</a></h1>
+                    <div class="nav-left">
+                    <a href="{% url 'post_new' %}"> <p style="font-size:30px;color:red;font-family: Courier;">New Blog Post</p></a>
+                </div>
+                </div>
+            </header>
+            {% block content %}
             {% endblock content %}
         </div>
     </body>
 </html>
-

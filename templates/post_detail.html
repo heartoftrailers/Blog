@@ -4,4 +4,7 @@
         <h2>{{ object.title }}</h2>
         <p>{{ object.body }}</p>
     </div>
+    <a href="{% url 'post_edit' post.pk %}"><p style="font-size:20px;font-family: Arial, Helvetica, sans-serif;"> Edit Blog Post</a>
+    <p><a href="{% url 'post_delete' post.pk %}"><p style="font-size:20px;font-family: Arial, Helvetica, sans-serif;">Delete Blog Post</a></p>
+    
 {% endblock content %}
