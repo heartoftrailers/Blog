@@ -47,9 +47,8 @@ body {
 .post-entry h2 a:hover {
     color: red;
 }
-#bg{
-    background-size: 1900px 1000px;
-    background-repeat: no-repeat;
-    background-position: top;
-    background-attachment: fixed;
+#bg {
+    background-image:url('w3css.gif');
+    background-repeat:no-repeat;
+    background-size:cover;
 }
