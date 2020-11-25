@@ -25,7 +25,7 @@ SECRET_KEY = '3sqxfzmd+-hc^eb@$5#)fzoa%wd^q=$x#495*k^%h9w^!=tg%3'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [*]
 
 
 # Application definition
@@ -124,4 +124,5 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 LOGIN_REDIRECT_URL = 'home' #login page 148
 LOGOUT_REDIRECT_URL = 'home' #logout page 152
+
 
