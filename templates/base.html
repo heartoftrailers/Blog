@@ -1,0 +1,99 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color:linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+}
+
+.topnav a {
+  float: left;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  
+  
+}
+
+.topnav a:hover {
+  background-color: rgb(221, 221, 221);
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #ff00aa;
+  color: white;
+}
+
+.topnav-right {
+  float: right;
+  
+}
+div.topnav-right{
+    line-height: 0;
+}
+</style>
+
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="{% url 'home' %}">Home</a> 
+  <a href="{% url 'login' %}">Login</a>
+  <a href="{% url 'post_new' %}">New Blog Post</a>
+
+
+  <div class="topnav-right">
+    {% if user.is_authenticated %}
+    <p><a style="font-size:15px">Hi {{ user.username }}!<a href="{% url 'logout' %}"style="font-size:15px">Log out</a></p>
+   
+{% else %}
+    <a href="{% url 'login' %}" style="color:rgb(0, 238, 255);">You are logged out</a>
+    
+{% endif %}
+
+  </div>
+</div>
+
+
+</body>
+</html>
+
+
+
+      
+      
+
+{% load static %}
+<html>
+    <head>
+        <title>Django blog</title>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400"
+        rel="stylesheet">
+        <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <body id="bg" style="background-image: url('/static/city');"> 
+        <img src="/static/self.jpg" alt="Girl in a jacket" width="200" height="110">
+        <div>
+            <header>
+                <div class="nav-left">
+                    <h1><a href="{% url 'home' %}">Alex's Blog</a></h1>
+                </div>
+                <div class="nav-right">
+                 
+                </div>
+            </header>
+
+        {% block content %}
+        {% endblock content %}
+        </div>
+    </body>
+</html>
