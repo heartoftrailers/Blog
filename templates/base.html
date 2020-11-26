@@ -39,24 +39,29 @@ body {
 div.topnav-right{
     line-height: 0;
 }
-</style>4546
+</style>
 
 </head>
 <body>
 
 <div class="topnav">
   <a class="active" href="{% url 'home' %}">Home</a> 
-  <a href="{% url 'login' %}">Login</a>
+  
   <a href="{% url 'post_new' %}">New Blog Post</a>
+  
 
 
   <div class="topnav-right">
+    
     {% if user.is_authenticated %}
     <p><a style="font-size:15px">Hi {{ user.username }}!<a href="{% url 'logout' %}"style="font-size:15px">Log out</a></p>
    
 {% else %}
-    <a href="{% url 'login' %}" style="color:rgb(0, 238, 255);">You are logged out</a>
+    <a href="{% url 'signup' %}">Sign Up</a>
+    <a href="{% url 'login' %}">Login</a>
+ 
     
+    <a href="{% url 'login' %}" style="color:rgb(0, 238, 255);">You are logged out</a>
 {% endif %}
 
   </div>
