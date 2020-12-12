@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 
 from django.contrib.auth.forms import UserCreationForm
-from .forms import RegisterForm
+from blog.forms import RegisterForm
 from django.urls import reverse_lazy
 from django.views import generic
 

@@ -5,6 +5,7 @@ BlogDetailView,
 BlogCreateView,
 BlogUpdateView,
 BlogDeleteView,
+
 )
 urlpatterns = [
     path('post<int:pk>/delete/',BlogDeleteView.as_view(), name='post_delete'),
